@@ -71,6 +71,55 @@ function App() {
 
   //  _______________ >< Action Creater and Dispatch >< _______________ //
 
+  // Action Creater - yangi obyektlar yaratib baradigan funcksiya bo'lib funcksiyaga kirgan argumentlardan biri bo'lib bizga dinamik tarzda
+  // obyekt yaratib beradi action creator funksiyasi obyekt qaytarayotgan payt ikkit property aniq bo'lish kk 1) type, 2) payload,
+  //
+
+  // const ADD_PERSON = "person"
+  // const ADD_MOBILE = "mobile"
+
+  // const personAction = (name, age)=> {
+  //   return{
+  //     type: ADD_PERSON,
+  //     payloadi:{
+  //        name: name,
+  //        age: age
+  //     }
+  //   }
+  // }
+
+  // const initialState = [{
+  //   name: "Umid"
+  // },{
+  //   name: "salom"
+  // }]
+
+  // const INCREMENT = "ADFA"
+
+  // const personAction = (name, age)=> {
+  //   return{
+  //     type: INCREMENT,
+  //     payloadi:{
+  //        name: name,
+  //        age: age
+  //     }
+  //   }
+  // }
+
+  // const changeNameReducer = (state=initialState, action)=>{
+  //   if(action.type ===  INCREMENT){
+  //     return [...state, action.payload]
+  //   }
+  //   return state
+  // }
+
+  // const jafar = personAction("Jafar", 20)
+  // console.log(jafar)
+
+  // const store = Redux.createStore(changeNameReducer,  initialState);
+  // store.dispatch(jafar)
+  // console.log(store.getState())
+
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
