@@ -121,7 +121,7 @@ function App() {
   // store.dispatch(jafar)
   // console.log(store.getState())
 
-  //  _______________ >< Subscribe va bindAction cre >< _______________ //
+  //  _______________ >< Subscribe va bindAction creator >< _______________ //
 
   // Subscribe bu - create storening metodi bo'lib storeda biror bir o'zgarish bo'lsa subscribening ichida berilgan funcksiya avtomatik holatda
   // ishlab ketadi yani hooklardagi useEffectga o'xshaydi.
@@ -137,6 +137,90 @@ function App() {
   // Bind Action creators bu - biror bir funcksiyani action creatorlar bilan bog'lab beruvchi funcksiya hisoblanadi
   // bind creator methodi ikki bo'ladi: 1) obyekt-(obyekt ichida action creatore nomlari keladi), 2) bog'lamoqchi bo'lgan
   // funcksiya.
+
+  // const bindAction = Redux.bindActionCreators({incrementAction, decrementAction, resetAction}, store.dispatch)
+
+  // console.clear();
+
+  // boshlang'ich fleshkaga bervoradigan qiymat
+  // const initialState = { count: 0 };
+
+  // const inc = () => {
+  //   return {
+  //     type: "INC",
+
+  //   };
+  // };
+
+  // const dec = () => {
+  //   return {
+  //     type: "DEC",
+  //   };
+  // };
+
+  // const reset = () => {
+  //   return {
+  //     type: "RES",
+  //   };
+  // };
+
+  // const incREducer = (state=initialState, action) => {
+  //   if (action.type === "INC") {
+  //     return { count: state.count + 1 };
+  //   }
+  //   return state;
+  // };
+
+  // const decREducer = (state=initialState, action) => {
+  //   if (action.type === "INC") {
+  //     return { count: state.count - 1 };
+  //   }
+  //   return state;
+  // };
+
+  // const resetREducer = (state=initialState, action) => {
+  //   if (action.type === "INC") {
+  //     return { count: 0 };
+  //   }
+  //   return state;
+  // };
+
+  // // reducer oldingi ma'lumotlarni olib yangisiga tashlaydi
+  // // action hodisalar
+  // // action bilan reducer dispatch bog'laydi
+
+  // //
+  // const reducers = Redux.combineReducers({
+  //   incREducer,
+  //   decREducer,
+  //   resetREducer,
+  // });
+
+  // const reducer = (state, action)=>{
+  //   if(ation.type === "INC"){
+  //     return{count: state.count+1}
+  //   }
+  //     if (action.type === "INC") {
+  //     return { count: 0 };
+  //   }
+  //     if (action.type === "INC") {
+  //     return { count: state.count - 1 };
+  //   }
+  //   return state;
+
+  // }
+
+  // const sub = ()=>{
+  //   console.log("sub ishladi")
+  // }
+  // // fleshkada qandaydir o'zgarish bo'lsa supscribe ishlab ketadi useEffectga o'xshab ketadi
+  // store.supscribe(sub)
+
+  // const bindAction = Redux.bindActionCreators({incrementAction, decrementAction, resetAction}, store.dispatch)
+  // const store = Redux.createStore(reducers, initialState);
+
+  // store.dispatch(initialState());
+  // console.log(store.getState());
 
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
