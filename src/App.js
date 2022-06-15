@@ -223,8 +223,45 @@ function App() {
   // console.log(store.getState());
 
   //  _______________ >< Combine Reducers >< _______________ //
-  //  _______________ >< Redux >< _______________ //
-  //  _______________ >< Redux >< _______________ //
+
+  // Reducer kelayotgan action ushlab olib u action turiga qarab reducerning ichidagi bitta if ga kiradi va eski state bilan kalayotgan
+  // actionni payloadini qo'shib yangi qiymat qaytaradi. va bu qiyamatni storega berib yuboradi.
+  // Reducerni kichik qismlarga bo'lishning asosiy sababi nesting (ichma ichlikda qochishdir) har bir kichik action uchun alohida reducer yaratish aptimal variant.
+  // va bu reduserni bitta katta reduserga yig'ish uchun "Combine" reducerdan foydalanamiz.
+  // Combine reducerga bitta obyekt kirib keladi va bu obyektning elementlari reduserdir
+
+  // const allReducers = Redux.combineReducers({studentReducer, teacherReducer});
+
+  //  _______________ >< Enhanser >< _______________ //
+
+  // Enhanser bu - middleware bo'lib storening elementi o'zgarishini qo'yishga yordam beradi.
+
+  // const allReducers = Redux.combineReducers({
+  //   incrementReducer,
+  //   decrementReducer,
+  //   resetReducer,
+  // });
+  // const monitoringEnhancer = (storage) => (reducer, initialState, enhancer) => {
+  //   const monitorReducer = (state, action) => {
+  //     const start = performance.now();
+  //     const newState = reducer(state, action);
+  //     const end = performance.now();
+  //     const diff = end- start;
+  //     console.log(diff);
+  //     return newState;
+  //   };
+  //   return storage(monitorReducer, initialState, enhancer);
+  // }
+
+  // const store = Redux.createStore(reducer, initialState, monitoringEnhancer);
+  // const bindActions = Redux.bindActionCreators({studentAction, teacherAction}, store.dispatch);
+  // store.subscribe(subs);
+  // bindActions.studentAction("Umid", 20)
+  // bindActions.teacherAction("Jafar kalla", 20, 1)
+  // console.log(store.getState())
+
+  //  _______________ >< React va Redux ni ulash >< _______________ //
+
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
