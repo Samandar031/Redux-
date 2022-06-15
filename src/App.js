@@ -18,7 +18,7 @@ function App() {
   //   }
 
   //   const ayir = (val)=>{
-  //     return val+30
+  //     return val+300
   //   }
 
   //   const natija = compose(qush,kupay,ayir)
@@ -73,7 +73,8 @@ function App() {
 
   // Action Creater - yangi obyektlar yaratib baradigan funcksiya bo'lib funcksiyaga kirgan argumentlardan biri bo'lib bizga dinamik tarzda
   // obyekt yaratib beradi action creator funksiyasi obyekt qaytarayotgan payt ikkit property aniq bo'lish kk 1) type, 2) payload,
-  //
+
+  // Dispatch bu - create storening funcksiyasi bo'lib action creator yaratib bergan obyektni reduserga olib borib beradi.
 
   // const ADD_PERSON = "person"
   // const ADD_MOBILE = "mobile"
@@ -120,7 +121,23 @@ function App() {
   // store.dispatch(jafar)
   // console.log(store.getState())
 
-  //  _______________ >< Redux >< _______________ //
+  //  _______________ >< Subscribe va bindAction cre >< _______________ //
+
+  // Subscribe bu - create storening metodi bo'lib storeda biror bir o'zgarish bo'lsa subscribening ichida berilgan funcksiya avtomatik holatda
+  // ishlab ketadi yani hooklardagi useEffectga o'xshaydi.
+
+  // misol
+
+  // const sub = ()=>{
+  //   console.log("sub ishladi")
+  // }
+  // // fleshkada qandaydir o'zgarish bo'lsa supscribe ishlab ketadi useEffectga o'xshab ketadi
+  // store.supscribe(sub)
+
+  // Bind Action creators bu - biror bir funcksiyani action creatorlar bilan bog'lab beruvchi funcksiya hisoblanadi
+  // bind creator methodi ikki bo'ladi: 1) obyekt-(obyekt ichida action creatore nomlari keladi), 2) bog'lamoqchi bo'lgan
+  // funcksiya.
+
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
   //  _______________ >< Redux >< _______________ //
